@@ -1,1 +1,1 @@
-a = 11
+print ("Welcome to Hagiwara Lab.")
