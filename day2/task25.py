@@ -10,7 +10,7 @@ class MLP_3Layer(task24.MLP_3Layer):
     a1 = np.dot(W1.T, x.T).T + b1
     a2 = np.dot(W2.T, a1.T).T + b2
     a3 = np.dot(W3.T, a2.T).T + b3
-    print(a3.max(axis = 1))
+  
     return softmax((a3.T - a3.max(axis = 1)).T)
   
 x = np.array([[1.0, 0.5], [-0.3, -0.2], [0.0, 0.8], [0.3, -0.4]])
