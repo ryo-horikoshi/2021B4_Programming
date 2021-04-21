@@ -7,7 +7,6 @@ def xor(x1,x2):
   and_gate = task11.Perceptron(1,1,2)
   nand_gate = task11.Perceptron(-1,-1.1,-2)
   or_gate = task11.Perceptron(1,1,0.5)
-
   return(and_gate.forward( nand_gate.forward( x1 , x2 ) , or_gate.forward( x1 , x2 ) ))
 
 for i in range(len(x1_list)):
