@@ -10,6 +10,5 @@ def xor(x1,x2):
 
   return(and_gate.forward( nand_gate.forward( x1 , x2 ) , or_gate.forward( x1 , x2 ) ))
 
-
 for i in range(len(x1_list)):
   print("XOR(%d, %d) = %d " %(x1_list[i],x2_list[i], xor(x1_list[i],x2_list[i])))
