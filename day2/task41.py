@@ -1,14 +1,15 @@
 import task33
 import task34
 import task35
+import random
 
 class NeuralNetwork:
-  def __init__(self):
+  def __init__(self,bias):
     self.params = {}
-    self.params['W1'] = None
-    self.params['b1'] = None
-    self.params['W2'] = None
-    self.params['b2'] = None
+    self.params['W1'] = random.random()
+    self.params['b1'] = bias
+    self.params['W2'] = random.random()
+    self.params['b2'] = bias
     self.grads['W2'] = None
     self.grads['b2'] = None
     self.grads['W1'] = None
