@@ -35,12 +35,12 @@ class NeuralNetwork:
     dx1 = SoftmaxCrossEntropy.backprop()
     dx2 = Sigmoid.backprop(dx1)
     dx3 = Affine.backprop(dx2)[0]
-    self.dW2 = Affine.backprop(dx2)[1]
-    self.dW2 = Affine.backprop(dx2)[2]
+    self.grads['W2'] = None = Affine.backprop(dx2)[1]
+    self.grads['b2'] = None = Affine.backprop(dx2)[2]
     dx4 = Sigmoid.backprop(dx3)
     dx5 = Affine.backprop(dx4)[0]
-    self.dW2 = Affine.backprop(dx4)[1]
-    self.dW2 = Affine.backprop(dx4)[2]
+    self.grads['W1'] = None = Affine.backprop(dx4)[1]
+    self.grads['b1'] = None = Affine.backprop(dx4)[2]
 
   def sgd(self, x, t, learning_rate):
     backprop(x,t)
