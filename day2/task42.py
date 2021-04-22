@@ -34,7 +34,7 @@ for i in range(learning_num):
   NeuralNetwork.nums = 0    
   x = np.empty((784,), float)
   t = np.empty((10,), int)
-  sample = np.random.randint(0, 10000, (100,))
+  sample = np.random.randint(0, 60000, (100,))
   for j in range(len(sample)):
     t = np.append(t,make_onehot(train_labels[sample[j]].T) , axis=0)
     x = np.append(x,train_images[sample[j]].T , axis=0)
@@ -57,7 +57,7 @@ NeuralNetwork.acc = 0
 NeuralNetwork.nums = 0    
 x = np.empty((784,), float)
 t = np.empty((10,), int)
-sample = np.random.randint(0, 60000, (100,))
+sample = np.random.randint(0, 10000, (100,))
 for j in range(len(sample)):
   t = np.append(t,make_onehot(test_labels[sample[j]].T) , axis=0)
   x = np.append(x,test_images[sample[j]].T , axis=0)
