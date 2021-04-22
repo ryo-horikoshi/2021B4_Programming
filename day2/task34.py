@@ -9,10 +9,13 @@ class Affine():
   def forward(self, x, W, b):
     z = np.dot(x,W) + b
     self.z = z
+    self.x = x
+    self.W = W
+    self.b = b
     return z
   def backprop(self, dz):
-    dx = np.dot(dz, W.T)
-    dw = np.dot(x.T, dz)
+    dx = np.dot(dz, self.W.T)
+    dw = np.dot(self.x.T, dz)
     db = np.sum(dz, axis=0)
     return [dx,dw,db]
 

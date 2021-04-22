@@ -9,7 +9,9 @@ class Sigmoid():
     self.x = z
     return z
   def backprop(self, dz):
+
     dx = dz * (1.0 - self.x) * self.x
+
     return dx
 
 x = np.array([-0.5, 0.0, 1.0, 2.0])
