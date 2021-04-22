@@ -4,12 +4,12 @@ import task35
 import random
 
 class NeuralNetwork:
-  def __init__(self,bias):
+  def __init__(self,bias,weight_init,in_size,hide_size,out_size):
     self.params = {}
-    self.params['W1'] = random.random()
-    self.params['b1'] = bias
-    self.params['W2'] = random.random()
-    self.params['b2'] = bias
+    self.params['W1'] = weight_init *  np.random.random(in_size,hide_size)
+    self.params['b1'] = np.zeros(hide_size)
+    self.params['W2'] = weight_init *  np.random.random(in_size,hide_size)
+    self.params['b2'] = np.zeros(hide_size)
     self.grads['W2'] = None
     self.grads['b2'] = None
     self.grads['W1'] = None
